@@ -1,6 +1,16 @@
 CMTH642 - Exploring T-distribution
 ================
 
+``` r
+library(knitr)
+```
+
+    ## Warning: package 'knitr' was built under R version 3.3.3
+
+``` r
+opts_knit$set(upload.fun = function(file) imgur_upload(file, key = "00ec676f881f591"))
+```
+
 #### T-Distribution
 
 ``` r
@@ -11,7 +21,7 @@ x <- seq(from =-5, to = 5, by=.1)
 plot(x, dt(x, df = 30), ylab='Probability',xlab='x', main="PDF of T-Distribution dt(x, df)")
 ```
 
-![](t-test_files/figure-markdown_github/unnamed-chunk-1-1.png)
+![](http://i.imgur.com/qP1iJOJ.png)
 
 ``` r
 # Generate another set of numbers
@@ -21,7 +31,7 @@ t.value <- seq(from = -3, to = 3, by=.1)
 plot(t.value, pt(t.value, df = 74), ylab='Cumulative Probability',xlab='T-Value', main="T-Distribution (CDF) pt(tvalues, df)")
 ```
 
-![](t-test_files/figure-markdown_github/unnamed-chunk-1-2.png)
+![](http://i.imgur.com/soR64Db.png)
 
 #### Calculations
 
@@ -57,7 +67,7 @@ quantiles <- seq(from = 0.001 , to = .999, by=.001)
 plot(qt(quantiles, df = 30), quantiles, xlab='Statistic(T-Value)',ylab='Quantile', main="T-Density Distribution (Inverse CDF) qt(quantiles, df)")
 ```
 
-![](t-test_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](http://i.imgur.com/yPJTApo.png)
 
 ``` r
 # notice symmetry
